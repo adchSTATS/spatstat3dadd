@@ -1,0 +1,16 @@
+Package: spatstat3dadd
+Type: Package
+Title: Additions to spatstat
+Version: 0.1.0
+Authors@R: person("Andreas", "Christoffersen", email = "andreas@math.aau.dk", role = c("aut", "cre"))
+Description: Addition to spatstat with functions for analysing point patterns in 3 dimensional space.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Remotes: adchSTATS/genfun,
+         adchSTATS/icpp
+Imports: ggplot2,
+         spatstat,
+         genfun,
+         icpp
