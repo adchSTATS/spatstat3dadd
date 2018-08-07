@@ -30,6 +30,7 @@ Each list element corresponds to the different heights of the cylinders.
 }
 \description{
 Function for estimating the cylindrical K-function from a three dimensional point pattern.
+Note: the cylinder only extends in one direction of the reference point.
 }
 \author{
 Andreas Dyreborg Christoffersen \email{andreas@math.aau.dk}

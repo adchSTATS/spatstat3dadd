@@ -1,6 +1,7 @@
 #' Cylindrical K-function
 #'
 #' Function for estimating the cylindrical K-function from a three dimensional point pattern.
+#' Note: the cylinder only extends in one direction of the reference point.
 #' @param X A point pattern of class \code{\link{pp3}}.
 #' @param t A numeric vector of heights.
 #' @param u A numeric vector determining the direction of the cylinders.
@@ -38,7 +39,7 @@ Kcyl3est <- function(X, t, u, ..., rmax = NULL, nrval = 128, drop = TRUE){
   }
   names(out) <- paste("t=", t, sep = "")
 
-  u <- u/sqrt(crossprod(u))
+  u <- u/as.vector(sqrt(crossprod(u)))
 
   W <- stats::window(X)$domain
   win <- c(W$xrange[2], W$yrange[2], W$zrange[2])
